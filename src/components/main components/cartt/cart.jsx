@@ -1,27 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import IconMinus from "../../../assets/icon-minus.svg";
 import IconPlus from "../../../assets/icon-plus.svg";
 import IconCart from "../../../assets/icon-cart.svg";
 import styles from "./cart.module.css";
 
-const Cart = () => {
-  const [count, setCount] = useState(0);
-
-  const numberAdd = () => {
-    if (count === 20) {
-      setCount(count);
-    } else {
-      setCount(count + 1);
-    }
-  };
-  const numberRemove = () => {
-    if (count === 0) {
-      setCount(count);
-    } else {
-      setCount(count - 1);
-    }
-  };
-
+const Cart = ({ onAddToCartClick, count, numberAdd, numberRemove }) => {
   return (
     <>
       <div className={styles.cartContainer}>
@@ -36,7 +19,7 @@ const Cart = () => {
         </div>
       </div>
       <div className={styles.addToCartContainer}>
-        <div className={styles.btnAddToCart}>
+        <div onClick={onAddToCartClick} className={styles.btnAddToCart}>
           <div>
             <img src={IconCart} alt="icon-cart" />
           </div>

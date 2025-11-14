@@ -22,9 +22,10 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.75);
   transform: translateX(-100%);
-  transition: transform 0.3s ease-out;
+
   z-index: 1000;
 }
+
 .menuOverlay::before {
   content: "";
   position: absolute;
@@ -60,4 +61,14 @@
   font-size: 1.1em;
   padding-bottom: 25px;
   cursor: pointer;
+}
+.cartBadge {
+  position: absolute;
+  background-color: rgb(255, 115, 0);
+  padding: 1px 5px;
+  font-size: x-small;
+  font-weight: 600;
+  border-radius: 8px;
+  color: white;
+  margin: -7px -10px;
 }
