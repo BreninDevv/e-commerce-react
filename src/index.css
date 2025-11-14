@@ -8,6 +8,7 @@ body {
   padding: 0;
   margin: 0;
 }
+/* HEADER */
 .menu {
   background-color: rgb(255, 255, 255);
   width: 100%;
@@ -24,6 +25,9 @@ body {
   padding-bottom: 4px;
   cursor: initial;
 }
+/* ////////////////////// */
+
+/* MAIN */
 .images-main {
   position: relative;
   width: 100%;
@@ -146,4 +150,16 @@ div.promotion50 span {
 }
 .btnAddToCart span {
   font-weight: 600;
+}
+#next.on {
+  background-color: #e0e0e0;
+  color: #9e9e9e;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+#previous.on {
+  background-color: #e0e0e0;
+  color: #9e9e9e;
+  opacity: 0.6;
+  cursor: not-allowed;
 }
