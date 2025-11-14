@@ -1,0 +1,33 @@
+.cartContainer {
+  margin: 15px;
+  padding: 20px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+  align-items: center;
+}
+.cartContainer button {
+  background-color: transparent;
+  border: none;
+}
+.cartBtns {
+  display: flex;
+  justify-content: space-between;
+}
+.cartBtns span {
+  font-weight: 600;
+}
+.addToCartContainer {
+  margin: 15px;
+  padding: 20px;
+  background-color: rgb(255, 144, 18);
+  border-radius: 10px;
+}
+.btnAddToCart {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+.btnAddToCart span {
+  font-weight: 600;
+}

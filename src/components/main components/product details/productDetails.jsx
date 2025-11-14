@@ -1,9 +1,10 @@
 import React from "react";
+import styles from "./productDetails.module.css";
 
 const ProductDetails = () => {
   return (
     <>
-      <div className="titleAndText">
+      <div className={styles.titleAndText}>
         <h4>SNEAKER COMPANY</h4>
         <h1>Fall Limited Edition Sneakers</h1>
         <p>

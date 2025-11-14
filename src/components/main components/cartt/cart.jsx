@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import IconMinus from "../../assets/icon-minus.svg";
-import IconPlus from "../../assets/icon-plus.svg";
-import IconCart from "../../assets/icon-cart.svg";
+import IconMinus from "../../../assets/icon-minus.svg";
+import IconPlus from "../../../assets/icon-plus.svg";
+import IconCart from "../../../assets/icon-cart.svg";
+import styles from "./cart.module.css";
 
 const Cart = () => {
   const [count, setCount] = useState(0);
@@ -23,8 +24,8 @@ const Cart = () => {
 
   return (
     <>
-      <div className="cartContainer">
-        <div className="cartBtns">
+      <div className={styles.cartContainer}>
+        <div className={styles.cartBtns}>
           <button onClick={() => numberRemove()}>
             <img src={IconMinus} alt="icon-minus" />
           </button>
@@ -34,8 +35,8 @@ const Cart = () => {
           </button>
         </div>
       </div>
-      <div className="addToCartContainer">
-        <div className="btnAddToCart">
+      <div className={styles.addToCartContainer}>
+        <div className={styles.btnAddToCart}>
           <div>
             <img src={IconCart} alt="icon-cart" />
           </div>

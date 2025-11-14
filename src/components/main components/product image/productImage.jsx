@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import imageMain from "../../assets/image-product-1.jpg";
-import iconPrevious from "../../assets/icon-previous.svg";
-import iconNext from "../../assets/icon-next.svg";
-import image2 from "../../assets/image-product-2.jpg";
-import image3 from "../../assets/image-product-3.jpg";
-import image4 from "../../assets/image-product-4.jpg";
+import imageMain from "../../../assets/image-product-1.jpg";
+import iconPrevious from "../../../assets/icon-previous.svg";
+import iconNext from "../../../assets/icon-next.svg";
+import image2 from "../../../assets/image-product-2.jpg";
+import image3 from "../../../assets/image-product-3.jpg";
+import image4 from "../../../assets/image-product-4.jpg";
+import styles from "./productImage.module.css";
 
 const ProductImage = () => {
   const [image, setImage] = useState(imageMain);
@@ -42,17 +43,17 @@ const ProductImage = () => {
 
   return (
     <>
-      <div className="images-main">
-        <img className="images" src={image} alt="image-main" />
+      <div className={styles.imagesMain}>
+        <img className={styles.images} src={image} alt="image-main" />
 
         <div
           onClick={() => previousImage()}
           id="previous"
-          className="btnPrevious"
+          className={styles.btnPrevious}
         >
           <img src={iconPrevious} alt="icon-previous" />
         </div>
-        <div onClick={() => nextImage()} id="next" className="btnNext">
+        <div onClick={() => nextImage()} id="next" className={styles.btnNext}>
           <img src={iconNext} alt="" />
         </div>
       </div>

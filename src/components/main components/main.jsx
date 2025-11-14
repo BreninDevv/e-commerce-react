@@ -1,8 +1,8 @@
 import React from "react";
-import ProductImage from "./productImage";
-import ProductDetails from "./productDetails";
-import Prices from "./prices";
-import Cart from "./cart";
+import ProductImage from "./product image/productImage";
+import ProductDetails from "./product details/productDetails";
+import Prices from "./prices/prices";
+import Cart from "./cartt/cart";
 
 const Main = () => {
   return (

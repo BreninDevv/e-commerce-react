@@ -1,0 +1,34 @@
+.prices {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  justify-content: space-between;
+}
+.priceAndPromotion {
+  display: flex;
+  gap: 20px;
+}
+.price125 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+div.promotion50 span {
+  color: white;
+}
+.promotion50 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3px;
+  background-color: black;
+  width: 50px;
+  height: 30px;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+.discount250 {
+  color: gray;
+  text-decoration: line-through;
+  font-weight: 700;
+  padding-top: 9px;
+}

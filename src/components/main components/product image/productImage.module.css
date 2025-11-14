@@ -1,0 +1,41 @@
+.imagesMain {
+  position: relative;
+  width: 100%;
+  max-width: 425px;
+  margin: 0 auto;
+}
+
+.images {
+  width: 100%;
+  max-width: 425px;
+}
+.btnPrevious {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.btnNext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  left: unset;
+  right: 4%;
+  transform: translateY(-50%);
+  top: 50%;
+  cursor: pointer;
+}
