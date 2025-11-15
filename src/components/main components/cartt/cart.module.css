@@ -31,3 +31,6 @@
 .btnAddToCart span {
   font-weight: 600;
 }
+.btnPointer {
+  cursor: pointer;
+}

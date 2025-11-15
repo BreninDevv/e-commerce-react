@@ -101,7 +101,7 @@
 }
 .empty {
   display: flex;
-  height: 170px;
+  height: 120px;
   justify-content: center;
   align-items: center;
 }
@@ -121,6 +121,7 @@
   position: absolute;
   left: 89.2%;
   top: 45%;
+  cursor: pointer;
 }
 .btnCheckout {
   position: absolute;
@@ -131,4 +132,8 @@
   text-align: center;
   padding-top: 13.3px;
   top: 68%;
+  cursor: pointer;
+}
+.spanCheckout {
+  font-weight: 600;
 }
