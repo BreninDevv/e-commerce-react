@@ -45,6 +45,7 @@
 @media (min-width: 1024px) {
   .images {
     border-radius: 10px;
+    cursor: pointer;
   }
   .btnNext,
   .btnPrevious {
@@ -58,5 +59,6 @@
   .thumbnails img {
     width: 85.9px;
     border-radius: 10px;
+    cursor: pointer;
   }
 }

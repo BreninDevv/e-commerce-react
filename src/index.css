@@ -33,3 +33,9 @@ p {
     padding: 16px 4.5rem;
   }
 }
+@media (min-width: 1800px) {
+  .header {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+}

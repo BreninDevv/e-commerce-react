@@ -154,6 +154,9 @@
     color: gray;
     gap: 37px;
   }
+  .menuDesktop li {
+    cursor: pointer;
+  }
   .logo {
     padding-right: 60px;
     padding-top: 2.5px;
@@ -176,6 +179,15 @@
   .finalHr {
     display: flex;
     margin: 20px 20px;
+    width: 98%;
     border: 1px solid rgb(226, 226, 226);
+  }
+}
+@media (min-width: 1800px) {
+  .cartContainer {
+    left: 75%;
+  }
+  .avatarImage {
+    left: 81%;
   }
 }
