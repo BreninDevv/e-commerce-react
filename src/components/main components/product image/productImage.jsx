@@ -5,6 +5,10 @@ import iconNext from "../../../assets/icon-next.svg";
 import image2 from "../../../assets/image-product-2.jpg";
 import image3 from "../../../assets/image-product-3.jpg";
 import image4 from "../../../assets/image-product-4.jpg";
+import thumbnailMain from "../../../assets/image-product-1-thumbnail.jpg";
+import thumbnail2 from "../../../assets/image-product-2-thumbnail.jpg";
+import thumbnail3 from "../../../assets/image-product-3-thumbnail.jpg";
+import thumbnail4 from "../../../assets/image-product-4-thumbnail.jpg";
 import styles from "./productImage.module.css";
 
 const ProductImage = () => {
@@ -45,6 +49,12 @@ const ProductImage = () => {
     <>
       <div className={styles.imagesMain}>
         <img className={styles.images} src={image} alt="image-main" />
+        <div className={styles.thumbnails}>
+          <img src={thumbnailMain} alt="thumbnail-main" />
+          <img src={thumbnail2} alt="thumbnail2" />
+          <img src={thumbnail3} alt="thumbnail3" />
+          <img src={thumbnail4} alt="thumbnail4" />
+        </div>
 
         <div
           onClick={() => previousImage()}
@@ -54,7 +64,7 @@ const ProductImage = () => {
           <img src={iconPrevious} alt="icon-previous" />
         </div>
         <div onClick={() => nextImage()} id="next" className={styles.btnNext}>
-          <img src={iconNext} alt="" />
+          <img src={iconNext} alt="icon-next" />
         </div>
       </div>
     </>

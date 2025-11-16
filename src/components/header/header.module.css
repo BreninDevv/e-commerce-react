@@ -137,3 +137,45 @@
 .spanCheckout {
   font-weight: 600;
 }
+.menuDesktop {
+  display: none;
+}
+.finalHr {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .iconMenu {
+    display: none;
+  }
+  .menuDesktop {
+    display: flex;
+    list-style-type: none;
+    font-weight: 500;
+    color: gray;
+    gap: 37px;
+  }
+  .logo {
+    padding-right: 60px;
+    padding-top: 2.5px;
+  }
+  .cartContainer {
+    position: absolute;
+    left: 86%;
+    top: 42px;
+  }
+  .avatarImage {
+    position: absolute;
+    left: 90%;
+  }
+  .cartImage {
+    width: 18px;
+  }
+  .imageLogin {
+    width: 37px;
+  }
+  .finalHr {
+    display: flex;
+    margin: 20px 20px;
+    border: 1px solid rgb(226, 226, 226);
+  }
+}

@@ -39,3 +39,24 @@
   top: 50%;
   cursor: pointer;
 }
+.thumbnails {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .images {
+    border-radius: 10px;
+  }
+  .btnNext,
+  .btnPrevious {
+    display: none;
+  }
+  .thumbnails {
+    display: flex;
+    gap: 27px;
+    padding-top: 20px;
+  }
+  .thumbnails img {
+    width: 85.9px;
+    border-radius: 10px;
+  }
+}

@@ -7,24 +7,29 @@ import styles from "./cart.module.css";
 const Cart = ({ onAddToCartClick, count, numberAdd, numberRemove }) => {
   return (
     <>
-      <div className={styles.cartContainer}>
-        <div className={styles.cartBtns}>
-          <button className={styles.btnPointer} onClick={() => numberRemove()}>
-            <img src={IconMinus} alt="icon-minus" />
-          </button>
-          <span>{count}</span>
-          <button className={styles.btnPointer} onClick={() => numberAdd()}>
-            <img src={IconPlus} alt="icon-plus" />
-          </button>
-        </div>
-      </div>
-      <div className={styles.addToCartContainer}>
-        <div onClick={onAddToCartClick} className={styles.btnAddToCart}>
-          <div>
-            <img src={IconCart} alt="icon-cart" />
+      <div className={styles.cartMain}>
+        <div className={styles.cartContainer}>
+          <div className={styles.cartBtns}>
+            <button
+              className={styles.btnPointer}
+              onClick={() => numberRemove()}
+            >
+              <img src={IconMinus} alt="icon-minus" />
+            </button>
+            <span>{count}</span>
+            <button className={styles.btnPointer} onClick={() => numberAdd()}>
+              <img src={IconPlus} alt="icon-plus" />
+            </button>
           </div>
-          <div>
-            <span>Add to cart</span>
+        </div>
+        <div className={styles.addToCartContainer}>
+          <div onClick={onAddToCartClick} className={styles.btnAddToCart}>
+            <div>
+              <img src={IconCart} alt="icon-cart" />
+            </div>
+            <div>
+              <span>Add to cart</span>
+            </div>
           </div>
         </div>
       </div>

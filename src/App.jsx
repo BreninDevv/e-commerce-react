@@ -12,10 +12,12 @@ function App() {
 
   return (
     <>
-      <Header
-        cartTotalQuantity={cartTotalQuantity}
-        setCartTotalQuantity={setCartTotalQuantity}
-      />
+      <div className="header">
+        <Header
+          cartTotalQuantity={cartTotalQuantity}
+          setCartTotalQuantity={setCartTotalQuantity}
+        />
+      </div>
       <Main onAddToCart={handleUpdateCartTotal} />
     </>
   );

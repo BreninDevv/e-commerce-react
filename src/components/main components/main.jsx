@@ -3,6 +3,7 @@ import ProductImage from "./product image/productImage";
 import ProductDetails from "./product details/productDetails";
 import Prices from "./prices/prices";
 import Cart from "./cartt/cart";
+import styles from "./main.module.css";
 
 const Main = ({ onAddToCart }) => {
   const [count, setCount] = useState(0);
@@ -30,16 +31,18 @@ const Main = ({ onAddToCart }) => {
 
   return (
     <>
-      <main>
+      <main className={styles.main}>
         <ProductImage />
-        <ProductDetails />
-        <Prices />
-        <Cart
-          onAddToCartClick={handleAddToCart}
-          count={count}
-          numberAdd={numberAdd}
-          numberRemove={numberRemove}
-        />
+        <div className={styles.details}>
+          <ProductDetails />
+          <Prices />
+          <Cart
+            onAddToCartClick={handleAddToCart}
+            count={count}
+            numberAdd={numberAdd}
+            numberRemove={numberRemove}
+          />
+        </div>
       </main>
     </>
   );

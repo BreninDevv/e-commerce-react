@@ -38,7 +38,12 @@ const Header = ({ cartTotalQuantity, setCartTotalQuantity }) => {
           <div className={styles.menu}>
             <div id="menu">
               <a href="#">
-                <img src={menuIcon} onClick={toggleMenu} alt="icon-menu" />
+                <img
+                  src={menuIcon}
+                  onClick={toggleMenu}
+                  alt="icon-menu"
+                  className={styles.iconMenu}
+                />
               </a>
             </div>
 
@@ -73,6 +78,23 @@ const Header = ({ cartTotalQuantity, setCartTotalQuantity }) => {
             <a href="#" className={styles.logo}>
               <img src={logo} alt="logo" />
             </a>
+            <div className={styles.menuDesktop}>
+              <li>
+                <a href="#"></a>Collections
+              </li>
+              <li>
+                <a href="#"></a>Men
+              </li>
+              <li>
+                <a href="#"></a>Women
+              </li>
+              <li>
+                <a href="#"></a>About
+              </li>
+              <li>
+                <a href="#"></a>Contact
+              </li>
+            </div>
             {cartOpen && (
               <div className={styles.cartOpen}>
                 <span className={styles.spanCart}>Cart</span>
@@ -116,16 +138,27 @@ const Header = ({ cartTotalQuantity, setCartTotalQuantity }) => {
             )}
             <div className={styles.cartContainer}>
               <a href="#">
-                <img src={cart} onClick={toggleCart} alt="cart" />
+                <img
+                  src={cart}
+                  onClick={toggleCart}
+                  alt="cart"
+                  className={styles.cartImage}
+                />
               </a>
               {cartTotalQuantity > 0 && (
                 <span className={styles.cartBadge}>{cartTotalQuantity}</span>
               )}
             </div>
-            <a href="#">
-              <img src={loginImage} alt="login image" width={25} />
+            <a href="#" className={styles.avatarImage}>
+              <img
+                src={loginImage}
+                alt="login image"
+                width={25}
+                className={styles.imageLogin}
+              />
             </a>
           </div>
+          <hr className={styles.finalHr} />
         </nav>
       </header>
     </>
