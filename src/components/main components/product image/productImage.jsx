@@ -9,62 +9,122 @@ import thumbnailMain from "../../../assets/image-product-1-thumbnail.jpg";
 import thumbnail2 from "../../../assets/image-product-2-thumbnail.jpg";
 import thumbnail3 from "../../../assets/image-product-3-thumbnail.jpg";
 import thumbnail4 from "../../../assets/image-product-4-thumbnail.jpg";
+import iconClose from "../../../assets/icon-close.svg";
 import styles from "./productImage.module.css";
 
 const ProductImage = () => {
-  const [image, setImage] = useState(imageMain);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
+  const imagesArray = [imageMain, image2, image3, image4];
+  const thumbnailsArray = [thumbnailMain, thumbnail2, thumbnail3, thumbnail4];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
-    if (image === imageMain) {
-      setImage(image2);
-    } else if (image === image2) {
-      setImage(image3);
-    } else if (image === image3) {
-      setImage(image4);
-    }
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imagesArray.length);
   };
 
   const previousImage = () => {
-    if (image === image4) {
-      setImage(image3);
-    } else if (image === image3) {
-      setImage(image2);
-    } else if (image === image2) {
-      setImage(imageMain);
-    }
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? imagesArray.length - 1 : prevIndex - 1
+    );
   };
 
-  useEffect(() => {
-    if (image === imageMain) {
-      document.getElementById("previous").classList.add("on");
-    } else if (image === image4) {
-      document.getElementById("next").classList.add("on");
-    } else {
-      document.getElementById("previous").classList.remove("on");
-      document.getElementById("next").classList.remove("on");
-    }
-  }, [image]);
+  const [imageActive, setImageActive] = useState(false);
+
+  const activeImage = () => {
+    setImageActive((prev) => !prev);
+  };
 
   return (
     <>
-      <div className={styles.imagesMain}>
-        <img className={styles.images} src={image} alt="image-main" />
-        <div className={styles.thumbnails}>
-          <img src={thumbnailMain} alt="thumbnail-main" />
-          <img src={thumbnail2} alt="thumbnail2" />
-          <img src={thumbnail3} alt="thumbnail3" />
-          <img src={thumbnail4} alt="thumbnail4" />
-        </div>
+      <div className={styles.flexImage}>
+        <div className={styles.imagesMain}>
+          {/* Imagem Principal */}
+          <img
+            className={styles.images}
+            src={imagesArray[currentImageIndex]}
+            alt="image-main"
+            onClick={() => isDesktop && activeImage()}
+          />
 
-        <div
-          onClick={() => previousImage()}
-          id="previous"
-          className={styles.btnPrevious}
-        >
-          <img src={iconPrevious} alt="icon-previous" />
-        </div>
-        <div onClick={() => nextImage()} id="next" className={styles.btnNext}>
-          <img src={iconNext} alt="icon-next" />
+          {/* Thumbnails (Visíveis no Desktop) */}
+          <div className={styles.thumbnails}>
+            {thumbnailsArray.map((thumb, index) => (
+              <img
+                key={index}
+                src={thumb}
+                onClick={() => setCurrentImageIndex(index)}
+                alt={`thumbnail-${index + 1}`}
+                className={
+                  currentImageIndex === index ? styles.activeThumb : ""
+                }
+              />
+            ))}
+          </div>
+
+          {/* LightBox/Imagem Ativa (Visível apenas no Desktop e quando ativo) */}
+          <div
+            id="activeImage"
+            className={`${styles.activeImage} ${
+              imageActive ? styles.active : ""
+            }`}
+          >
+            <div className={styles.lightboxContent}>
+              <div className={styles.btnClose} onClick={activeImage}>
+                <img src={iconClose} alt="close" />
+              </div>
+
+              <img
+                className={styles.imagesLightbox}
+                src={imagesArray[currentImageIndex]}
+                alt="image-main-lightbox"
+              />
+
+              <div
+                onClick={previousImage}
+                className={`${styles.btnPrevious} ${styles.btnLightboxPrevious}`}
+              >
+                <img src={iconPrevious} alt="icon-previous" />
+              </div>
+              <div
+                onClick={nextImage}
+                className={`${styles.btnNext} ${styles.btnLightboxNext}`}
+              >
+                <img src={iconNext} alt="icon-next" />
+              </div>
+              <div className={styles.thumbnails2}>
+                {thumbnailsArray.map((thumb, index) => (
+                  <img
+                    key={`lightbox-thumb-${index}`}
+                    src={thumb}
+                    onClick={() => setCurrentImageIndex(index)}
+                    alt={`thumbnail-lightbox-${index + 1}`}
+                    className={
+                      currentImageIndex === index ? styles.activeThumb : ""
+                    }
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+          <div
+            onClick={previousImage}
+            id="previous"
+            className={styles.btnPrevious}
+          >
+            <img src={iconPrevious} alt="icon-previous" />
+          </div>
+          <div onClick={nextImage} id="next" className={styles.btnNext}>
+            <img src={iconNext} alt="icon-next" />
+          </div>
         </div>
       </div>
     </>

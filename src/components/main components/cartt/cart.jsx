@@ -11,13 +11,13 @@ const Cart = ({ onAddToCartClick, count, numberAdd, numberRemove }) => {
         <div className={styles.cartContainer}>
           <div className={styles.cartBtns}>
             <button
-              className={styles.btnPointer}
+              className={styles.btnPointer1}
               onClick={() => numberRemove()}
             >
               <img src={IconMinus} alt="icon-minus" />
             </button>
             <span>{count}</span>
-            <button className={styles.btnPointer} onClick={() => numberAdd()}>
+            <button className={styles.btnPointer2} onClick={() => numberAdd()}>
               <img src={IconPlus} alt="icon-plus" />
             </button>
           </div>

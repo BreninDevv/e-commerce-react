@@ -31,12 +31,52 @@
 .btnAddToCart span {
   font-weight: 600;
 }
-.btnPointer {
+.btnPointer1 {
   cursor: pointer;
+  align-items: center;
+  padding-bottom: 5px;
+}
+.btnPointer2 {
+  cursor: pointer;
+  align-items: center;
+  padding-top: 3px;
 }
 .cartMain {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 768px) {
+  .cartMain {
+    flex-direction: row;
+  }
+  .cartContainer {
+    padding: 0;
+
+    min-width: 180px;
+  }
+  .cartBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 10px;
+  }
+  .btnPointer1:hover,
+  .btnPointer2:hover {
+    opacity: 0.5;
+  }
+  .addToCartContainer {
+    padding: 0;
+  }
+
+  .btnAddToCart {
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+  }
+  .addToCartContainer:hover {
+    background-color: rgb(255, 173, 80);
+  }
 }
 @media (min-width: 1024px) {
   .cartMain {
@@ -54,6 +94,10 @@
     height: 100%;
     padding: 0 10px;
   }
+  .btnPointer1:hover,
+  .btnPointer2:hover {
+    opacity: 0.5;
+  }
   .addToCartContainer {
     padding: 0;
   }
@@ -62,5 +106,8 @@
     width: 250px;
     height: 60px;
     cursor: pointer;
+  }
+  .addToCartContainer:hover {
+    background-color: rgb(255, 173, 80);
   }
 }

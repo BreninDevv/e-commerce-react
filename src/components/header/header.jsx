@@ -80,19 +80,19 @@ const Header = ({ cartTotalQuantity, setCartTotalQuantity }) => {
             </a>
             <div className={styles.menuDesktop}>
               <li>
-                <a href="#"></a>Collections
+                <a href="#">Collections</a>
               </li>
               <li>
-                <a href="#"></a>Men
+                <a href="#">Men</a>
               </li>
               <li>
-                <a href="#"></a>Women
+                <a href="#">Women</a>
               </li>
               <li>
-                <a href="#"></a>About
+                <a href="#">About</a>
               </li>
               <li>
-                <a href="#"></a>Contact
+                <a href="#">Contact</a>
               </li>
             </div>
             {cartOpen && (
