@@ -47,7 +47,6 @@ const ProductImage = () => {
     <>
       <div className={styles.flexImage}>
         <div className={styles.imagesMain}>
-          {/* Imagem Principal */}
           <img
             className={styles.images}
             src={imagesArray[currentImageIndex]}
@@ -55,7 +54,6 @@ const ProductImage = () => {
             onClick={() => isDesktop && activeImage()}
           />
 
-          {/* Thumbnails (Visíveis no Desktop) */}
           <div className={styles.thumbnails}>
             {thumbnailsArray.map((thumb, index) => (
               <img
@@ -70,7 +68,6 @@ const ProductImage = () => {
             ))}
           </div>
 
-          {/* LightBox/Imagem Ativa (Visível apenas no Desktop e quando ativo) */}
           <div
             id="activeImage"
             className={`${styles.activeImage} ${
