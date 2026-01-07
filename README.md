@@ -25,6 +25,8 @@ Durante o desenvolvimento, foram reforçados conceitos de:
 - Organização de projeto com Vite
 - Responsividade e design limpo com Tailwind
 
+DEPLOY: https://e-commerce-breno-ten-pi.vercel.app
+
 ## 💻 Como rodar o projeto
 
 ```bash
