@@ -2,6 +2,8 @@
 
 Landing page de um e-commerce desenvolvida em **React** com **Vite** e **Tailwind CSS**, baseada em um desafio do [Frontend Mentor](https://www.frontendmentor.io/).
 
+DEPLOY: https://e-commerce-breno-ten-pi.vercel.app
+
 ## 🚀 Tecnologias usadas
 
 - **React** — criação de componentes reutilizáveis e interface dinâmica
@@ -25,7 +27,6 @@ Durante o desenvolvimento, foram reforçados conceitos de:
 - Organização de projeto com Vite
 - Responsividade e design limpo com Tailwind
 
-DEPLOY: https://e-commerce-breno-ten-pi.vercel.app
 
 ## 💻 Como rodar o projeto
 
